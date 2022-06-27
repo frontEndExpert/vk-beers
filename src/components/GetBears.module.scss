@@ -1,0 +1,109 @@
+.beerscards {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 600px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.white {
+    height: 500px;
+    background-color: white;
+    cursor: pointer;
+    border: 0px solid white;
+  
+    &:hover {
+      background-color: #ffffcc;
+    }
+  }
+
+  .remove {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      margin-right: auto;
+  }
+ 
+.beerCard {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items:center ;
+
+    position: relative;
+
+    width: 50px;
+    height: auto;
+    
+    padding: 5px;
+    text-align:center;
+    
+    font-size: 12px;
+    z-index: 5;
+    margin-left: -10px;
+    margin-right: -10px;
+    &:hover {
+        z-index: 20;
+    }
+
+    .header{
+        flex: 1 1 300px;
+        transform: rotate(-90deg);
+        width: 50px;
+        transition: font-size 1s, font-weight 1s, width 1s,  transform 1s;
+        &:hover {
+            font-size: 20px;
+            font-weight: bold;
+            width: 200px;
+            transform: rotate(0deg);
+        }
+    }
+
+    img.beer {
+        flex: 2 1 auto;
+        height: auto;
+        width: 100%;
+        z-index: 5;
+        transition: width 2s, height 2s, z-index 2s, transform 2s;
+        position: relative;
+        &:hover {
+            position:sticky;
+            width: 180%;
+            height: auto;
+            cursor: pointer;
+            z-index: 20;
+            margin: 0px;
+    }
+    
+    }
+
+    
+    .favorite {
+        flex: 0 0 25px;
+        text-align: center;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        right: 0px;
+        
+        &:hover {
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    
+    }
+}
+
+
+@keyframes bigger {
+    from {
+        transform: scale(1) ;
+      }
+      to {
+        transform: scale(1.2);
+      }
+  }
+
+  
