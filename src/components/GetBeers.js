@@ -43,7 +43,7 @@ const previous = () => {
   }
   
 const next20 = () => {
-    if(currentPage<100){
+    if(currentPage<20){
         dispatch(updateCurrentPage(currentPage+1))
     }
 }
@@ -104,7 +104,8 @@ const removeAll = () => {
 
         { (!showFav && !search) && <button className={styles.white} onClick={next20} >
           <img  src={rightArrow} width='20px' height='20px' alt="Next"  /></button>}
-    </div>
+        </div>
+        <span>{currentPage}</span>
     </div>)
 }
 
