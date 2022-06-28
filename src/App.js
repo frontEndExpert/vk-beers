@@ -72,7 +72,6 @@ const navigate = useNavigate();
 const handleSubmit = (event) => {
   event.preventDefault()
   var title = event.target.value
-  console.log(title)
   dispatch(updateSearchTitle(title));
   dispatch(updateSearch(true));
   

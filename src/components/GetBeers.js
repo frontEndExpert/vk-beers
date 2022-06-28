@@ -49,7 +49,6 @@ const next20 = () => {
 }
 
 const setFav = (id) => {
-    console.log("currentBeersArr", currentBeersArr, "favoritesSet", favoritesSet)
         var favArr = null;
     if(favoritesSet && favoritesSet.includes(id)){
         favArr = favoritesSet.filter(item => item !== id);
@@ -64,8 +63,6 @@ const setFav = (id) => {
 const removeAll = () => {
     if (window.confirm("Are you sure you want to empty your favorites beers list? !") == true) {
         favoritesSet.forEach(id => {
-
-            console.log(id)
             dispatch(updateBeerFavorite(id));
             dispatch(updateFavoritesSet([]));
         })
