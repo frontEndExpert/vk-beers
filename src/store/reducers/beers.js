@@ -151,13 +151,13 @@ const initialState = {
                 var id = action.payload;
                 //update the beers array: state.beersArr
                 var beersTemp = state.searchedArr 
-                beersTemp.forEach((beer)=>{
+                beersTemp.length && beersTemp.forEach((beer)=>{
                     if(beer.id === id){ beer.favorite = !beer.favorite;}
                 })
                 state.searchedArr = beersTemp;
 
                 beersTemp = state.beersArr 
-                beersTemp.forEach((beer)=>{
+                beersTemp.length && beersTemp.forEach((beer)=>{
                     if(beer.id === id){ beer.favorite = !beer.favorite;}
                 })
                 state.beersArr = beersTemp;
@@ -227,6 +227,6 @@ const initialState = {
   });
 
 
-  export const { updateSearchTitle, updateSearch, updateShowFav, updateFavoritesSet, updateBeerFavorite, updateCurrentPage, updateCurrentBeer, updateShowModal } =  beersSlice.actions;
+export const { updateSearchTitle, updateSearch, updateShowFav, updateFavoritesSet, updateBeerFavorite, updateCurrentPage, updateCurrentBeer, updateShowModal } =  beersSlice.actions;
 
 export default beersSlice.reducer;
